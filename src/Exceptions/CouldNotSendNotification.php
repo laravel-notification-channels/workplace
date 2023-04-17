@@ -2,14 +2,13 @@
 
 namespace NotificationChannels\Workplace\Exceptions;
 
+use Exception;
 use GuzzleHttp\Exception\ClientException;
 
-class CouldNotSendNotification extends \Exception
+class CouldNotSendNotification extends Exception
 {
     /**
      * Thrown when there's a bad request and an error is responded.
-     *
-     * @param ClientException $exception
      *
      * @return static
      */
@@ -36,6 +35,8 @@ class CouldNotSendNotification extends \Exception
 
     /**
      * Thrown when we're unable to communicate with Workplace.
+     *
+     * @param mixed $message
      *
      * @return static
      */
