@@ -1,0 +1,33 @@
+name: "Run tests"
+
+on:
+    push:
+        branches: [master, main]
+    pull_request:
+        branches: [master, main]
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: true
+            matrix:
+                php: [8.0, 8.1, 8.2]
+
+        name: For PHP ${{ matrix.php }}
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php }}
+                  coverage: xdebug
+
+            - name: Install dependencies
+              run: composer install --no-interaction --no-suggest
+
+            - name: Execute tests
+              run: vendor/bin/phpunit --testdox --coverage-text
