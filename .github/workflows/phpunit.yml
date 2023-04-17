@@ -1,10 +1,6 @@
-name: "Run tests"
+name: Tests with PHPUnit
 
-on:
-    push:
-        branches: [master, main]
-    pull_request:
-        branches: [master, main]
+on: [push, pull_request]
 
 jobs:
     tests:
@@ -24,10 +20,10 @@ jobs:
               uses: shivammathur/setup-php@v2
               with:
                   php-version: ${{ matrix.php }}
-                  coverage: xdebug
+                  coverage: none
 
             - name: Install dependencies
               run: composer install --no-interaction --no-suggest
 
             - name: Execute tests
-              run: vendor/bin/phpunit --testdox --coverage-text
+              run: vendor/bin/phpunit
