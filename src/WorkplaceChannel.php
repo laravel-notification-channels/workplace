@@ -2,6 +2,7 @@
 
 namespace NotificationChannels\Workplace;
 
+use Exception;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Notifications\Notification;
@@ -9,7 +10,7 @@ use NotificationChannels\Workplace\Exceptions\CouldNotSendNotification;
 
 class WorkplaceChannel
 {
-    const FORMATTING_MARKDOWN = 'MARKDOWN';
+    public const FORMATTING_MARKDOWN = 'MARKDOWN';
 
     /** @var ClientInterface Http client. */
     protected $httpClient;
@@ -23,13 +24,12 @@ class WorkplaceChannel
      * Send the given notification.
      *
      * @param mixed $notifiable
-     * @param \Illuminate\Notifications\Notification $notification
      *
      * @throws \NotificationChannels\Workplace\Exceptions\CouldNotSendNotification
      */
     public function send($notifiable, Notification $notification)
     {
-        if (! $to = $notifiable->routeNotificationFor('workplace', $notification)) {
+        if (!$to = $notifiable->routeNotificationFor('workplace', $notification)) {
             throw CouldNotSendNotification::endpointNotProvided();
         }
 
@@ -51,7 +51,7 @@ class WorkplaceChannel
             );
         } catch (ClientException $exception) {
             throw CouldNotSendNotification::workplaceRespondedWithAnError($exception);
-        } catch (\Exception $exception) {
+        } catch (Exception $exception) {
             throw CouldNotSendNotification::couldNotCommunicateWithWorkplace($exception);
         }
     }

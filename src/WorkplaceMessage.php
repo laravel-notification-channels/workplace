@@ -39,7 +39,7 @@ class WorkplaceMessage
 
     public function isPlainText()
     {
-        return ! $this->markdown;
+        return !$this->markdown;
     }
 
     public function asMarkdown()

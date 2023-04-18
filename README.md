@@ -2,10 +2,8 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/workplace.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/workplace)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/laravel-notification-channels/workplace/master.svg?style=flat-square)](https://travis-ci.org/laravel-notification-channels/workplace)
-[![StyleCI](https://styleci.io/repos/230680829/shield)](https://styleci.io/repos/230680829)
+[![Run tests](https://github.com/laravel-notification-channels/workplace/actions/workflows/run-tests.yml/badge.svg)](https://github.com/josepostiga/workplace/actions/workflows/run-tests.yml)
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/workplace.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/workplace)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/laravel-notification-channels/workplace/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/workplace/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/workplace.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/workplace)
 
 This package makes it easy to send notifications using [Workplace](https://work.facebook.com) with Laravel 5.5+ and 6.0
