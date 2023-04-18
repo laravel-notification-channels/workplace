@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravel-notification-channels/workplace.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/workplace)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Run tests](https://github.com/laravel-notification-channels/workplace/actions/workflows/run-tests.yml/badge.svg)](https://github.com/josepostiga/workplace/actions/workflows/run-tests.yml)
+[![Tests](https://github.com/laravel-notification-channels/workplace/actions/workflows/phpunit.yml/badge.svg)](https://github.com/laravel-notification-channels/workplace/actions/workflows/phpunit.yml)
 [![Quality Score](https://img.shields.io/scrutinizer/g/laravel-notification-channels/workplace.svg?style=flat-square)](https://scrutinizer-ci.com/g/laravel-notification-channels/workplace)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravel-notification-channels/workplace.svg?style=flat-square)](https://packagist.org/packages/laravel-notification-channels/workplace)
 
